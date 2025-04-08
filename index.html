@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AR Video from Image</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs>
+      <!-- Đặt marker nhận diện -->
+      <a-marker preset="hiro">
+        <!-- Đặt video 3D -->
+        <a-video src="#myVideo" width="4" height="2" position="0 0 0"></a-video>
+      </a-marker>
+
+      <!-- Camera để nhận diện marker -->
+      <a-camera></a-camera>
+
+      <!-- Định nghĩa video -->
+      <video id="myVideo" src="path_to_your_video.mp4" autoplay="true" loop="true" crossorigin="anonymous" style="display:none;"></video>
+    </a-scene>
+  </body>
+</html>
